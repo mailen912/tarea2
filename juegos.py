@@ -42,9 +42,9 @@ def guardar_datos(juego):
 		if event in (None or 'Salir'):
 			break
 		elif event in ('Finalizar'):
-			datos={'nombre':values['nom'],'apellido':values['ape'],'juego':juego}
+			datos={'nombre':values['nom'],'apellido':values['ape'],'juego':juego}#diccionario
 			archivo=open('Datos_juego.txt','w')
-			json.dump(datos,archivo,indent=4)
+			json.dump(datos,archivo,indent=4)#archivo en formato json
 			archivo.close()
 			texto=window.FindElement('k')
 			texto.Update('Datos Guardados')
